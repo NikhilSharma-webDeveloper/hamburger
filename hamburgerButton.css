@@ -1,0 +1,77 @@
+*{
+    padding:0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+}
+/* transition: all .5s ease-in-out */
+section{
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+   
+}
+
+.hamburger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+  
+
+
+.hamburgerBtn{
+    width: 50px;
+    height: 6px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101,47, .2);
+    transition: all 0.5s ease-in-out;
+}
+
+.hamburgerBtn::before,
+.hamburgerBtn::after{
+    content: " ";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101,47, .2);
+    transition: all 0.5s ease-in-out;
+}
+
+.hamburgerBtn::before{
+    transform: translateY(-16px);
+}
+.hamburgerBtn::after{
+    transform: translateY(16px);
+}
+
+
+/* animation */
+.hamburgerOpen .hamburgerBtn{
+    /* transform: translateX(-50px); */
+    background: transparent;
+    box-shadow: none;
+}
+
+.hamburgerOpen .hamburgerBtn::before{
+    transform: rotate(45deg) ;
+}
+
+.hamburgerOpen .hamburgerBtn::after{
+    transform: rotate(-45deg) ;
+}
+
+
+
+/* translate(35px, -35px) 
+translate(35px, 35px)*/
